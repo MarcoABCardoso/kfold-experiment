@@ -1,5 +1,5 @@
 const { shuffle } = require("shuffle-seed")
-const { Experiment } = require("../lib")
+const Experiment = require("../lib")
 
 let sampleData = require('./sample-data.json')
 let sampleResults = require('./sample-results.json')

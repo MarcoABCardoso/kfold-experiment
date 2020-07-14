@@ -19,7 +19,7 @@ npm install marcao-kfold
 ## Usage
 
 ```js
-const { Experiment } = require('marcao-kfold')
+const Experiment = require('marcao-kfold')
 
 const experiment = new Experiment({
     exportData: () => [],               // Function that gets data, as an array of { input: any, class: string }

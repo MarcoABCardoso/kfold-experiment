@@ -8,7 +8,7 @@ declare class Experiment {
      * Construct an Experiment object.
      * @constructor
      */
-    constructor(options: ExperimentOptions): Experiment
+    constructor(options: ExperimentOptions)
     /**
      * Execute experiment
      */
@@ -30,6 +30,10 @@ interface ExperimentOptions {
     POLLING_INTERVAL?: Number
 }
 
+interface Example {
+    input: any
+    class: string
+}
 interface Class {
     class: string
     confidence: number
@@ -78,4 +82,4 @@ interface ExperimentResults {
     }
 }
 
-export = { Experiment }
+export = Experiment
