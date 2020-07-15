@@ -39,25 +39,25 @@ describe('Experiment', () => {
         it('Executes K-fold experiment on a workspace', (done) => {
             let experiment = new Experiment(experimentOptions)
             experiment.run()
-                .catch(err => done.fail(err))
                 .then(results => {
                     expect(results).toEqual(sampleResults)
                     expect(experiment.trainModel).toHaveBeenCalledTimes(3)
                     expect(experiment.deleteModel).toHaveBeenCalledTimes(3)
                     done()
                 })
+                .catch(err => done.fail(err))
         })
         it('Deletes models if prediction fails', (done) => {
             let experiment = new Experiment(experimentOptions)
             experiment.predict = jest.fn().mockRejectedValue()
             experiment.run()
-                .catch(err => done.fail(err))
                 .then(results => {
                     expect(results).toEqual({})
                     expect(experiment.trainModel).toHaveBeenCalledTimes(3)
                     expect(experiment.deleteModel).toHaveBeenCalledTimes(3)
                     done()
                 })
+                .catch(err => done.fail(err))
         })
     })
 })

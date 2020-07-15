@@ -1,6 +1,6 @@
 {
   "name": "marcao-kfold",
-  "version": "0.0.10",
+  "version": "1.0.0",
   "description": "Generic cross-validation package.",
   "main": "lib/index.js",
   "dependencies": {
