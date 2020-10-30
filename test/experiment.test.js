@@ -3,6 +3,7 @@ const Experiment = require("../lib")
 
 let sampleData = require('./sample-data.json')
 let sampleResults = require('./sample-results.json')
+let sampleFolds = require('./sample-folds.json')
 let experimentOptions
 
 
@@ -54,6 +55,29 @@ describe('Experiment', () => {
                 .then(results => {
                     expect(results).toEqual({})
                     expect(experiment.trainModel).toHaveBeenCalledTimes(3)
+                    expect(experiment.deleteModel).toHaveBeenCalledTimes(3)
+                    done()
+                })
+                .catch(err => done.fail(err))
+        })
+        it('Exits prematurely if trainOnly is enabled', (done) => {
+            experimentOptions.trainOnly = true
+            let experiment = new Experiment(experimentOptions)
+            experiment.run()
+                .then(results => {
+                    expect(experiment.deleteModel).not.toHaveBeenCalled()
+                    expect(experiment.predict).not.toHaveBeenCalled()
+                    done()
+                })
+                .catch(err => done.fail(err))
+        })
+        it('Uses folds if passed', (done) => {
+            experimentOptions = { ...experimentOptions, ...sampleFolds }
+            let experiment = new Experiment(experimentOptions)
+            experiment.run()
+                .then(results => {
+                    expect(results).toEqual(sampleResults)
+                    expect(experiment.trainModel).not.toHaveBeenCalled()
                     expect(experiment.deleteModel).toHaveBeenCalledTimes(3)
                     done()
                 })

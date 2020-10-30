@@ -1,0 +1,225 @@
+{
+    "folds": [
+        {
+            "train": [
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                }
+            ],
+            "test": [
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_0"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                }
+            ]
+        },
+        {
+            "train": [
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_0"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                }
+            ],
+            "test": [
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                }
+            ]
+        },
+        {
+            "train": [
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 0
+                    },
+                    "class": "class_0"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 0,
+                        "y": 1,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                }
+            ],
+            "test": [
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 1
+                    },
+                    "class": "class_1"
+                },
+                {
+                    "input": {
+                        "x": 1,
+                        "y": 0,
+                        "z": 0
+                    },
+                    "class": "class_2"
+                }
+            ]
+        }
+    ],
+    "trainModels": [
+        {
+            "id": 0.13863725124737547
+        },
+        {
+            "id": 0.13863725124737547
+        },
+        {
+            "id": 0.13863725124737547
+        }
+    ]
+}
