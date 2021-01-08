@@ -6,6 +6,9 @@
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
+  <a href="https://codecov.io/gh/MarcoABCardoso/marcao-kfold">
+    <img src="https://codecov.io/gh/MarcoABCardoso/marcao-kfold/branch/master/graph/badge.svg?token=BX2YIhy6q2"/>
+  </a>
 </p>
 
 > Base package for implementing K-Fold experiments

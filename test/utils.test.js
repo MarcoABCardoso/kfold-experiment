@@ -1,4 +1,4 @@
-const { pollingAwait } = require("../lib/utils")
+const { pollingAwait } = require('../lib/utils')
 
 describe('#pollingAwait', () => {
     describe('When isItDoneYet eventually returns true', () => {
