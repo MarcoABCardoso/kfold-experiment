@@ -1,6 +1,6 @@
 <h1 align="center">marcao-kfold</h1>
 <p>
-  <a href="https://www.npmjs.com/package/marcao-wa-experiment" target="_blank">
+  <a href="https://www.npmjs.com/package/marcao-kfold" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/marcao-kfold.svg">
   </a>
   <a href="#" target="_blank">
@@ -8,6 +8,9 @@
   </a>
   <a href="https://codecov.io/gh/MarcoABCardoso/marcao-kfold">
     <img src="https://codecov.io/gh/MarcoABCardoso/marcao-kfold/branch/master/graph/badge.svg?token=BX2YIhy6q2"/>
+  </a>
+  <a href="#" target="_blank">
+    <img alt="Node.js CI" src="https://github.com/MarcoABCardoso/marcao-kfold/workflows/Node.js%20CI/badge.svg" />
   </a>
 </p>
 
