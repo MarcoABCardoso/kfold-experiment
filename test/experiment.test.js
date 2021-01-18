@@ -62,9 +62,10 @@ describe('Experiment', () => {
                 })
                 .catch(err => done.fail(err))
         })
-        it('Deletes models if prediction fails', (done) => {
+        it('Deletes models if prediction fails, does not throw if deletion fails', (done) => {
             let experiment = new Experiment(experimentOptions)
             experiment.predict = jest.fn().mockRejectedValue()
+            experiment.deleteModel = jest.fn().mockRejectedValueOnce().mockResolvedValue()
             experiment.run()
                 .then(results => {
                     expect(results).toEqual({})
