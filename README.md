@@ -6,8 +6,8 @@
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href="https://codecov.io/gh/MarcoABCardoso/marcao-kfold">
-    <img src="https://codecov.io/gh/MarcoABCardoso/marcao-kfold/branch/master/graph/badge.svg?token=BX2YIhy6q2"/>
+  <a href='https://coveralls.io/github/MarcoABCardoso/marcao-kfold?branch=master'>
+    <img src='https://coveralls.io/repos/github/MarcoABCardoso/marcao-kfold/badge.svg?branch=master' alt='Coverage Status' />
   </a>
   <a href="#" target="_blank">
     <img alt="Node.js CI" src="https://github.com/MarcoABCardoso/marcao-kfold/workflows/Node.js%20CI/badge.svg" />
