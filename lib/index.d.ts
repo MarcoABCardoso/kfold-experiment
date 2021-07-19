@@ -1,6 +1,6 @@
 
 /**
- * @module marcao-kfold
+ * @module kfold-experiment
  */
 
 declare class Experiment {

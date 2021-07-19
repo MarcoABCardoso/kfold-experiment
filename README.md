@@ -1,16 +1,16 @@
-<h1 align="center">marcao-kfold</h1>
+<h1 align="center">kfold-experiment</h1>
 <p>
-  <a href="https://www.npmjs.com/package/marcao-kfold" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/marcao-kfold.svg">
+  <a href="https://www.npmjs.com/package/kfold-experiment" target="_blank">
+    <img alt="Version" src="https://img.shields.io/npm/v/kfold-experiment.svg">
   </a>
   <a href="#" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href='https://coveralls.io/github/MarcoABCardoso/marcao-kfold?branch=master'>
-    <img src='https://coveralls.io/repos/github/MarcoABCardoso/marcao-kfold/badge.svg?branch=master' alt='Coverage Status' />
+  <a href='https://coveralls.io/github/MarcoABCardoso/kfold-experiment?branch=master'>
+    <img src='https://coveralls.io/repos/github/MarcoABCardoso/kfold-experiment/badge.svg?branch=master' alt='Coverage Status' />
   </a>
   <a href="#" target="_blank">
-    <img alt="Node.js CI" src="https://github.com/MarcoABCardoso/marcao-kfold/workflows/Node.js%20CI/badge.svg" />
+    <img alt="Node.js CI" src="https://github.com/MarcoABCardoso/kfold-experiment/workflows/Node.js%20CI/badge.svg" />
   </a>
 </p>
 
@@ -19,13 +19,13 @@
 ## Install
 
 ```sh
-npm install marcao-kfold
+npm install kfold-experiment
 ```
 
 ## Usage
 
 ```js
-const Experiment = require('marcao-kfold')
+const Experiment = require('kfold-experiment')
 
 const experiment = new Experiment({
     exportData: () => [],               // Function that gets data, as an array of { input: any, class: string }
