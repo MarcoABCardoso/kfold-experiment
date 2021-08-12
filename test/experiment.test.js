@@ -64,16 +64,17 @@ describe('Experiment', () => {
         })
         it('Deletes models if prediction fails, does not throw if deletion fails', (done) => {
             let experiment = new Experiment(experimentOptions)
-            experiment.predict = jest.fn().mockRejectedValue()
+            experiment.predict = jest.fn().mockRejectedValue('foo_error')
             experiment.deleteModel = jest.fn().mockRejectedValueOnce().mockResolvedValue()
             experiment.run()
-                .then(results => {
-                    expect(results).toEqual({})
+                .then(err => done.fail(err))
+                .catch(err => {
+                    expect(err).toEqual('foo_error')
                     expect(experiment.trainModel).toHaveBeenCalledTimes(3)
                     expect(experiment.deleteModel).toHaveBeenCalledTimes(3)
+                    expect(experiment.predict).toHaveBeenCalledTimes(30)
                     done()
                 })
-                .catch(err => done.fail(err))
         })
         it('Exits prematurely if trainOnly is enabled', (done) => {
             experimentOptions.trainOnly = true

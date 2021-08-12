@@ -23,11 +23,13 @@ interface ExperimentOptions {
     deleteModel: (model: Model) => Promise<any>
 
     num_folds?: Number
+    max_retries?: Number
     verbose?: Number
     seed?: Number
     batch_size?: Number
     throttle?: Number
     polling_interval?: Number
+    polling_timeout?: Number
 }
 
 interface Example {
