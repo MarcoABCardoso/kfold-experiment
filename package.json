@@ -1,6 +1,6 @@
 {
   "name": "kfold-experiment",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Generic cross-validation package.",
   "main": "lib/index.js",
   "dependencies": {

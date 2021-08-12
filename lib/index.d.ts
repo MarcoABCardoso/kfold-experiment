@@ -19,15 +19,15 @@ interface ExperimentOptions {
     exportData: () => Promise<Example[]>
     trainModel: (trainSet: Example[]) => Promise<Model>
     checkModelStatus: (model: Model) => Promise<boolean>
-    predict: (input: any) => Promise<Class[]>
+    predict: (model: Model, input: any) => Promise<Class[]>
     deleteModel: (model: Model) => Promise<any>
 
-    NUM_FOLDS?: Number
-    VERBOSE?: Number
-    SEED?: Number
-    BATCH_SIZE?: Number
-    THROTTLE?: Number
-    POLLING_INTERVAL?: Number
+    num_folds?: Number
+    verbose?: Number
+    seed?: Number
+    batch_size?: Number
+    throttle?: Number
+    polling_interval?: Number
 }
 
 interface Example {
@@ -49,6 +49,10 @@ interface ExperimentResults {
         output: Class[]
     }[]
     reports: {
+        overview: {
+            metric: string
+            value: number
+        }[]
         class_distribution: {
             class: string
             count: number
@@ -62,6 +66,8 @@ interface ExperimentResults {
             count: number
             k: number
             precision: number
+            recall: number
+            f1: number
         }[]
         pairwise_class_errors: {
             true_class: string

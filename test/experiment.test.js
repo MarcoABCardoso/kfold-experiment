@@ -27,14 +27,14 @@ beforeEach(() => {
         trainModel: jest.fn().mockResolvedValue({ id: Math.random() }),
         getModelID: model => model.id,
         checkModelStatus: jest.fn().mockResolvedValueOnce(false).mockResolvedValue(true),
-        predict: jest.fn(example => Promise.resolve(shuffle([{ class: 'class_2', confidence: 0.5 }, { class: 'class_1', confidence: 0.6 }, { class: 'class_0', confidence: 0.7 }], JSON.stringify(example.input)))).mockResolvedValueOnce([]),
+        predict: jest.fn((model, example) => shuffle([{ class: 'class_2', confidence: 0.5 }, { class: 'class_1', confidence: 0.6 }, { class: 'class_0', confidence: 0.7 }], JSON.stringify(example))).mockResolvedValueOnce([]),
         deleteModel: jest.fn().mockResolvedValue('foo_delete_response'),
 
-        THROTTLE: 0,
-        POLLING_INTERVAL: 0,
-        SEED: 1,
-        NUM_FOLDS: 3,
-        BATCH_SIZE: 2
+        throttle: 0,
+        polling_interval: 0,
+        seed: 1,
+        num_folds: 3,
+        batch_size: 2
     }
 })
 
@@ -45,7 +45,7 @@ describe('Experiment', () => {
             expect(experiment).toBeInstanceOf(Experiment)
         })
         it('Sets this.log when verbose is enabled', () => {
-            let experiment = new Experiment({ ...experimentOptions, VERBOSE: true })
+            let experiment = new Experiment({ ...experimentOptions, verbose: true })
             expect(experiment.log).toEqual(console.log)
         })
     })

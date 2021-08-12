@@ -4,120 +4,10 @@
             "input": {
                 "x": 0,
                 "y": 0,
-                "z": 0
-            },
-            "true_class": "class_2",
-            "output": [
-                {
-                    "class": "class_2",
-                    "confidence": 0.5
-                },
-                {
-                    "class": "class_1",
-                    "confidence": 0.6
-                },
-                {
-                    "class": "class_0",
-                    "confidence": 0.7
-                }
-            ]
-        },
-        {
-            "input": {
-                "x": 0,
-                "y": 0,
                 "z": 1
             },
             "true_class": "class_1",
             "output": []
-        },
-        {
-            "input": {
-                "x": 0,
-                "y": 1,
-                "z": 0
-            },
-            "true_class": "class_2",
-            "output": [
-                {
-                    "class": "class_2",
-                    "confidence": 0.5
-                },
-                {
-                    "class": "class_1",
-                    "confidence": 0.6
-                },
-                {
-                    "class": "class_0",
-                    "confidence": 0.7
-                }
-            ]
-        },
-        {
-            "input": {
-                "x": 0,
-                "y": 1,
-                "z": 1
-            },
-            "true_class": "class_1",
-            "output": [
-                {
-                    "class": "class_2",
-                    "confidence": 0.5
-                },
-                {
-                    "class": "class_1",
-                    "confidence": 0.6
-                },
-                {
-                    "class": "class_0",
-                    "confidence": 0.7
-                }
-            ]
-        },
-        {
-            "input": {
-                "x": 1,
-                "y": 0,
-                "z": 0
-            },
-            "true_class": "class_2",
-            "output": [
-                {
-                    "class": "class_2",
-                    "confidence": 0.5
-                },
-                {
-                    "class": "class_1",
-                    "confidence": 0.6
-                },
-                {
-                    "class": "class_0",
-                    "confidence": 0.7
-                }
-            ]
-        },
-        {
-            "input": {
-                "x": 1,
-                "y": 0,
-                "z": 1
-            },
-            "true_class": "class_1",
-            "output": [
-                {
-                    "class": "class_2",
-                    "confidence": 0.5
-                },
-                {
-                    "class": "class_1",
-                    "confidence": 0.6
-                },
-                {
-                    "class": "class_0",
-                    "confidence": 0.7
-                }
-            ]
         },
         {
             "input": {
@@ -150,6 +40,72 @@
             "true_class": "class_1",
             "output": [
                 {
+                    "class": "class_0",
+                    "confidence": 0.7
+                },
+                {
+                    "class": "class_2",
+                    "confidence": 0.5
+                },
+                {
+                    "class": "class_1",
+                    "confidence": 0.6
+                }
+            ]
+        },
+        {
+            "input": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "true_class": "class_2",
+            "output": [
+                {
+                    "class": "class_0",
+                    "confidence": 0.7
+                },
+                {
+                    "class": "class_2",
+                    "confidence": 0.5
+                },
+                {
+                    "class": "class_1",
+                    "confidence": 0.6
+                }
+            ]
+        },
+        {
+            "input": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "true_class": "class_2",
+            "output": [
+                {
+                    "class": "class_0",
+                    "confidence": 0.7
+                },
+                {
+                    "class": "class_2",
+                    "confidence": 0.5
+                },
+                {
+                    "class": "class_1",
+                    "confidence": 0.6
+                }
+            ]
+        },
+        {
+            "input": {
+                "x": 0,
+                "y": 1,
+                "z": 1
+            },
+            "true_class": "class_1",
+            "output": [
+                {
                     "class": "class_2",
                     "confidence": 0.5
                 },
@@ -162,9 +118,67 @@
                     "confidence": 0.7
                 }
             ]
+        },
+        {
+            "input": {
+                "x": 1,
+                "y": 0,
+                "z": 1
+            },
+            "true_class": "class_1",
+            "output": [
+                {
+                    "class": "class_1",
+                    "confidence": 0.6
+                },
+                {
+                    "class": "class_0",
+                    "confidence": 0.7
+                },
+                {
+                    "class": "class_2",
+                    "confidence": 0.5
+                }
+            ]
+        },
+        {
+            "input": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "true_class": "class_2",
+            "output": [
+                {
+                    "class": "class_2",
+                    "confidence": 0.5
+                },
+                {
+                    "class": "class_0",
+                    "confidence": 0.7
+                },
+                {
+                    "class": "class_1",
+                    "confidence": 0.6
+                }
+            ]
         }
     ],
     "reports": {
+        "overview": [
+            {
+                "metric": "weighted_precision",
+                "value": 0.625
+            },
+            {
+                "metric": "weighted_recall",
+                "value": 0.25
+            },
+            {
+                "metric": "weighted_f1",
+                "value": 0.325
+            }
+        ],
         "class_distribution": [
             {
                 "class": "class_0",
@@ -182,11 +196,11 @@
         "precision_at_k": [
             {
                 "k": 0,
-                "precision": 0.375
+                "precision": 0.25
             },
             {
                 "k": 1,
-                "precision": 0.75
+                "precision": 0.625
             },
             {
                 "k": 2,
@@ -225,27 +239,73 @@
             {
                 "class": "class_0",
                 "count": 1,
-                "k": 0,
-                "precision": 0
+                "precision": 0,
+                "recall": 0,
+                "f1": 0
             },
             {
                 "class": "class_2",
                 "count": 3,
-                "k": 0,
-                "precision": 1
+                "precision": 0.3333333333333333,
+                "recall": 0.3333333333333333,
+                "f1": 0.3333333333333333
             },
             {
                 "class": "class_1",
                 "count": 4,
-                "k": 0,
-                "precision": 0
+                "precision": 1,
+                "recall": 0.25,
+                "f1": 0.4
             }
         ],
         "pairwise_class_errors": [
             {
+                "true_class": "class_2",
+                "predicted_class": "class_0",
+                "count": 2,
+                "avg_confidence": 0.7,
+                "errors": [
+                    {
+                        "predicted_class": "class_0",
+                        "confidence": 0.7,
+                        "input": {
+                            "x": 0,
+                            "y": 1,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "predicted_class": "class_0",
+                        "confidence": 0.7,
+                        "input": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ]
+            },
+            {
+                "true_class": "class_1",
+                "predicted_class": "class_0",
+                "count": 1,
+                "avg_confidence": 0.7,
+                "errors": [
+                    {
+                        "predicted_class": "class_0",
+                        "confidence": 0.7,
+                        "input": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    }
+                ]
+            },
+            {
                 "true_class": "class_1",
                 "predicted_class": "class_2",
-                "count": 3,
+                "count": 1,
                 "avg_confidence": 0.5,
                 "errors": [
                     {
@@ -253,24 +313,6 @@
                         "confidence": 0.5,
                         "input": {
                             "x": 0,
-                            "y": 1,
-                            "z": 1
-                        }
-                    },
-                    {
-                        "predicted_class": "class_2",
-                        "confidence": 0.5,
-                        "input": {
-                            "x": 1,
-                            "y": 0,
-                            "z": 1
-                        }
-                    },
-                    {
-                        "predicted_class": "class_2",
-                        "confidence": 0.5,
-                        "input": {
-                            "x": 1,
                             "y": 1,
                             "z": 1
                         }
@@ -315,38 +357,38 @@
         "accuracy_vs_coverage": [
             {
                 "confidence_threshold": 0,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.1,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.2,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.30000000000000004,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.4,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.5,
-                "accuracy": 0.375,
+                "accuracy": 0.25,
                 "coverage": 0.875
             },
             {
                 "confidence_threshold": 0.6000000000000001,
-                "accuracy": 0.875,
-                "coverage": 0
+                "accuracy": 0.5,
+                "coverage": 0.375
             },
             {
                 "confidence_threshold": 0.7000000000000001,
