@@ -76,6 +76,20 @@ describe('Experiment', () => {
                     done()
                 })
         })
+        it('Doesn\'t delete models if we fail due to timeout and trainOnly is enabled', (done) => {
+            experimentOptions.trainOnly = true
+            experimentOptions.polling_timeout = 0
+            let experiment = new Experiment(experimentOptions)
+            experiment.deleteModel = jest.fn().mockRejectedValueOnce().mockResolvedValue()
+            experiment.run()
+                .then(err => done.fail(err))
+                .catch(err => {
+                    expect(err.message).toEqual('Timeout')
+                    expect(experiment.trainModel).toHaveBeenCalledTimes(3)
+                    expect(experiment.deleteModel).toHaveBeenCalledTimes(0)
+                    done()
+                })
+        })
         it('Exits prematurely if trainOnly is enabled', (done) => {
             experimentOptions.trainOnly = true
             let experiment = new Experiment(experimentOptions)
